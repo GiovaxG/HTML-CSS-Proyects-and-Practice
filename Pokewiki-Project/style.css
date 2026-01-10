@@ -1,0 +1,380 @@
+@font-face {
+    font-family: "Visitor1";
+    src: url("visitor/visitor1.ttf") format("truetype");
+}
+
+/* Global box-sizing + responsive media */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url();
+    background-size: 400px;
+    overflow-x: hidden;
+}
+
+/* #region Header Styles */
+
+header {
+    background-color: rgb(255, 39, 39);
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: start;
+    padding: 10px;
+    text-decoration: none;
+    background-image: url("patron_pokemon.png");
+    background-repeat: repeat;
+    background-size: 500px;   
+    width: 100%;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+}   
+
+#flex-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#PageNumbers {
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+#PageNumbers a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Visitor1", cursive;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+#PageNumbers a:hover {
+    background-color: #0000001a;
+    cursor: pointer;
+}
+
+#SearchBar {
+    display: flex;
+    margin: auto;
+    margin-left: 110px;
+}
+
+#SearchBar input[type="text"] {
+    margin: 0;
+    height: 34px;
+    width: 400px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    background-image: url("search_icon.png");
+    background-repeat: no-repeat;
+    background-position: left 5px center;
+    background-size: 20px 20px;;
+    padding-left: 30px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid gray;
+}
+
+#SearchBar input[type="text"]::placeholder {
+    color: gray;
+    font-size: 16px;
+}
+
+#SearchBar input[type="text"]:focus {
+    border: 1px solid black;
+}
+
+#SearchBar input[type="text"]:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+#SearchBar input[type="submit"] {
+    height: 34px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+#SearchBar input[type="submit"]:hover {
+    background-color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+#SearchBar input[type="submit"]:active {
+    background-color: rgb(150, 150, 150);
+}
+
+
+#img_a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 50px;
+    margin-left: 100px
+}
+
+#img_a img {
+    max-height: 70px;
+}
+
+/* #endregion */
+
+/* #region Navigation Bar Styles */
+
+nav {
+    margin: auto;
+    margin: 30px 100px 20px 25px;
+    padding: 0px 10px 0px 0px;
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#Tilte {
+    margin-left: 40px;;
+}   
+
+#Tilte h2 {
+    font-weight: 800;
+    margin: 0px;
+    margin: 20px 0px 5px 0px;
+}
+#nav_info {
+    font-weight: 600;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+} 
+
+#Pokemon_Title {
+    color: red;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#Enlaces {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+#Enlaces a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 5px; 
+}
+
+#Enlaces a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Main Content Styles */
+
+#flex-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 20px;
+    min-height: 600px;
+    margin-right: 100px;
+    margin-left: 25px;
+    margin-bottom: 100px;
+}
+
+
+main {
+    padding: 30px 30px 10px 30px;
+    min-height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#featured_article {
+    display: flex;
+}
+
+
+main h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+main h2 {
+    margin: 0;;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+
+main h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: gray;
+}
+
+#front_greninja {
+    max-height: 150px;
+    max-width: auto;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    background-color: rgb(243, 242, 242);
+    outline: 15px solid rgb(243, 242, 242);
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+main article {
+    text-wrap: pretty;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+#greninja_evolution {
+    min-width: 80%;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    margin: auto;
+}
+
+.img-scroll {
+    margin: auto;
+}
+
+/* #region Aside Styles */
+
+aside {
+    padding: 30px;
+    min-height: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    flex: 2 0 0;
+    display: flex;
+    flex-direction: column;
+}
+/* #endregion */
+
+/* #region Responsive Media Queries */
+@media screen and (max-width: 1200px) {
+    header {
+        margin: auto;
+        top: 0;
+    }
+    header #SearchBar {
+        margin: 10px 0 10px 0;
+    }
+    #flex-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        margin: 20px 50px 20px 50px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav #Tilte, nav #nav_info {
+        margin: 0;
+    }
+    nav #Enlaces {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    #flex-main {
+        margin: 0 50px 100px 50px;
+    }
+    #front_greninja {
+        max-height: 150px;
+        margin-left: 30px
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    #img_a {
+        display: none;
+    }
+    main {
+        flex: 1 0 100%;
+        margin-bottom: 20px;
+    }
+    aside {
+        flex: 1 0 100%;
+        max-width: 100%;
+        padding-bottom: 20px;
+        min-height: auto;
+    }
+    #front_greninja {
+        max-height: 200px;
+        margin: 0 auto 50px;
+    }
+    #featured_article {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header #SearchBar {
+        margin: 10px;
+        width: 100%;
+    }
+    nav, #flex-main, aside {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #front_greninja {
+        max-height: 120px;
+        width: auto;
+        margin: 0;
+        margin-bottom: 40px; 
+    }
+    .img-scroll {
+        max-width: 80vw;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #greninja_evolution {
+        width: 100%;
+        border-radius: 10px;
+        width: auto;
+        display: block;
+    }
+}
