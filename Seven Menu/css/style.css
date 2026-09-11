@@ -9,7 +9,7 @@
 
 .primary-nav {
     position: sticky;
-    top: 0;
+    top: 10;
     background-color: white;
     z-index: 10;
     display: flex;
@@ -40,7 +40,7 @@
     flex-direction: row;
     gap: 16px;
     list-style: none;
-    font-family: "BJCree";
+    font-family: "Playfair Display", sans-serif;
     font-weight: 600;
 }
 
@@ -63,6 +63,11 @@
 }
 
 @media (max-width: 600px) {
+    #shop,
+    #contact {
+        scroll-margin-top: 75px;
+    }
+
     .primary-nav {
         flex-wrap: wrap;
         padding: 12px 20px;
@@ -96,7 +101,7 @@
         grid-template-rows: 0fr;
         flex-basis: 100%;
         transition: grid-template-rows 0.25s ease;
-        font-family: "BJCree";
+        font-family: "Playfair Display", sans-serif;
         font-weight: 600;
     }
 
@@ -147,6 +152,11 @@
 
 /* HEADER */
 
+#shop,
+#contact {
+    scroll-margin-top: 90px;
+}
+
 /* FILTERS */
 
 
@@ -158,6 +168,7 @@
     padding: 20px 10px;
     display: flex;
     justify-content: space-evenly;
+    font-family: "Inter", sans-serif;
 
 }
 
@@ -175,7 +186,7 @@
     left: 50%;
     background-color: rgb(83, 83, 83);
     width: 30px;
-    height: 3px;
+    height: 2px;
     transform: translateX(-50%);
     transition: width 0.25s ease;
 }
@@ -192,6 +203,7 @@
     display: grid;
     grid-template-rows: repeat(3,minmax(250px,1fr));
     grid-auto-flow: column;
+    grid-template-columns: repeat(4,minmax(200px,1fr));
     grid-auto-columns: minmax(200px,1fr);
     gap: 24px;
     overflow-x: scroll;
@@ -222,13 +234,18 @@
     height: 20%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
 }
 
 .product-name a {
     text-decoration: none;
     color: white;
     text-align: center;
+    margin: 0px 5px;
 }
 
 .price {
@@ -238,4 +255,112 @@
     display: flex;
     align-items: center;
     padding: 0px 7px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+/* PRODUCTS ENDS */
+
+/* CONTACT */
+
+#contact {
+    min-height: 100vh;
+    background-color: rgb(27, 27, 27);
+    margin-top: 40px;
+    padding: 30px 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-rows: repeat(4,minmax(1fr,100px));
+    gap: 20px;
+}
+
+.contact-item {
+    background-image: url(/img/marmol-tex.png);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.contact-item:nth-child(1) {
+    font-weight: 700;
+    font-style: italic;
+}
+.contact-item h2 {
+    text-align: center;
+    margin: auto;
+}
+
+.contact-item:nth-child(2) ul {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+.contact-item:nth-child(2) ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly  ;
+    text-decoration: none;
+    list-style-type: none;
+    align-items: center;
+}
+
+.contact-img {
+    width: 40px;
+}
+
+.contact-img img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.contact-link {
+    width: 50%;
+}
+
+.contact-link a {
+    color: black;
+}
+
+.contact-item:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.shedule_after::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(83, 83, 83);
+    min-width: 90%;
+    height: 2px;
+}
+
+.shedule_after {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.map-container {
+    min-width:100%;
+    height: 200px;
+}
+
+/* FOOTER */
+
+footer {
+    background-image: url("/img/marmol-tex.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "Playfair Display", sans-serif;
 }

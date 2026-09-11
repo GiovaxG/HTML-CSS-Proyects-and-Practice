@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.nav-menu a').on('click', function () {
+        $('#nav-toggle').prop('checked', false);
+    });
+
     $('.category-item').on('click', function (event) {
         event.preventDefault();
 
